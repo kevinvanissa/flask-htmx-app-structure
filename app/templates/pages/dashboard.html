@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{%block title %}Dashboard{% endblock %}
+
+{% block additional_css%}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1 class="professional-h1 mb-3">Dashboard</h1>
+
+  <div class="col-md-12">
+  {% include "partials/_flash.html"%}
+  <p>This is the dashboard page. It also includes a test modal that uses htmx. This example was adapted from the example in the htmx documentation: <a href="https://htmx.org/examples/modal-bootstrap/">HTMX Modal Example</a> </p>
+	<button 
+    	hx-get="/test_modal" 
+    	hx-target="#modals-here" 
+    	hx-trigger="click" 
+    	data-bs-toggle="modal" 
+        data-bs-target="#modals-here"
+        class="btn btn-primary">
+		Open Test Modal
+	</button>
+	<hr>
+	<p>Below is an example of fetching data from server using htmx</p>
+   <button 
+    	hx-get="/get_data_test" 
+    	hx-target="#results" 
+    	hx-trigger="click" 
+        class="btn btn-secondary">
+	   Fetch Tasks
+	</button>
+
+	<div id="results" class="mt-3">
+	</div>
+
+  </div>
+{% endblock %}

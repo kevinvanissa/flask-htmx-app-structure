@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{%block title %}Sign Up{% endblock %}
+{% from "macros/_formhelpers.html" import render_field %}
+
+{% block content %}
+<div class="vh-100 d-flex justify-content-center align-items-center">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6">
+		  {% include "partials/_flash.html"%}
+            <div class="card bg-light">
+              <div class="card-body p-5">
+				  <form class="mb-3 mt-md-4" method="post" role="form" action="{{ url_for('auth.signup') }}">
+					  {{form.hidden_tag()}}
+                  <h2 class="fw-bold mb-2 text-uppercase ">Sign Up</h2>
+                  <p class=" mb-5">Please enter your information!</p>
+					{{ render_field(form.username, class="form-control") }}
+					{{ render_field(form.email, class="form-control") }}
+					{{ render_field(form.password, class="form-control") }}
+					{{ render_field(form.confirm, class="form-control") }}
+                  <div class="d-grid">
+                    <button class="btn btn-outline-secondary btn-lg" type="submit">Login</button>
+                  </div>
+                </form>
+                <div>
+					<p class="mb-0  text-center">Have an account? <a href="{{url_for('auth.login')}}" class="text-primary fw-bold">Log In</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	{% endblock %}

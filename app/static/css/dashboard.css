@@ -1,0 +1,44 @@
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#task-list li {
+    background: #e2e2e2;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#task-list li.completed {
+    background: #d4edda;
+}
+
+#task-list li.in-progress {
+    background: #fff3cd;
+}
+
+#task-list li.pending {
+    background: #f8d7da;
+}
+
+#task-list li strong {
+    display: block;
+}
+
+#task-h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.professional-h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #34495e;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+	text-align: center;
+}
+
+

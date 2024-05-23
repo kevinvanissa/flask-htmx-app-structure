@@ -1,0 +1,17 @@
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, message in messages %}
+   <script>
+  // Hide flash message after 3 seconds (adjust as needed)
+  setTimeout(function() {
+    document.querySelector('.alert').style.display = 'none';
+  }, 3000);
+</script> 
+<div class="alert alert-{{category}} alert-dismissible fade show" role="alert">
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    {{ message }}
+</div>
+
+{% endfor %}
+{% endif %}
+{% endwith %}

@@ -1,0 +1,9 @@
+        <h1 id="task-h1">My Task List</h1>
+        <ul id="task-list">
+            {% for task in tasks %}
+                <li class="{% if task.status == 'Completed' %}completed{% elif task.status == 'In Progress' %}in-progress{% else %}pending{% endif %}">
+                    <b>Task:</b> {{ task.task }} <br />
+                    <b>Status:</b> {{ task.status }}
+                </li>
+            {% endfor %}
+        </ul>	
