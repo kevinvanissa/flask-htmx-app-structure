@@ -8,8 +8,8 @@ To run the application locally, follow these steps:
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/kevinvanissa/flask.git
-cd your-repository
+git clone https://github.com/kevinvanissa/flask-htmx-app-structure.git
+cd flask-htmx-app-structure 
 ```
    2. **Set up virtual environment and install dependencies:**
 ```bash
