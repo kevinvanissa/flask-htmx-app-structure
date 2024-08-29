@@ -24,7 +24,13 @@ flask db init  # Initialize migrations (if not already done)
 flask db migrate -m "My First Migration"  # Generate a migration script
 flask db upgrade  # Apply the migration to create the database
 ```
-4. **To perform tests(basic test is included):***
+4. **Run Application**
+
+```bash
+flask run
+```
+
+5. **To perform tests (basic test is included):**
 ```bash
 pytest
 ```
